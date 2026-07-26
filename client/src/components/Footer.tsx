@@ -7,7 +7,7 @@ export default function Footer() {
     <footer style={{ borderTop: `1px solid ${theme.border}`, background: theme.surface }}>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-12 flex items-center justify-between">
         <span className="text-xs" style={{ color: theme.text2 }}>
-          &copy; {new Date().getFullYear()} Remindr
+        &copy; {new Date().getFullYear()} Reminder
         </span>
         <div className="flex items-center gap-4">
           <Link
@@ -21,7 +21,7 @@ export default function Footer() {
             Donate
           </Link>
           <a
-            href="https://github.com/larsmikki/remindr"
+          href="https://github.com/larsmikki/reminder"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-1.5 text-xs transition-opacity hover:opacity-80"

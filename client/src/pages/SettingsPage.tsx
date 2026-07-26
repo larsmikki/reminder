@@ -18,7 +18,7 @@ export default function SettingsPage() {
     const url = URL.createObjectURL(blob)
     const a = document.createElement('a')
     a.href = url
-    a.download = 'remindr-backup.json'
+    a.download = 'reminder-backup.json'
     a.click()
     URL.revokeObjectURL(url)
     addToast('Backup exported', 'success')
@@ -56,12 +56,12 @@ export default function SettingsPage() {
     <div className="max-w-2xl mx-auto">
       <div className="mb-8">
         <h1 className="text-2xl font-extrabold tracking-tight text-text">Settings</h1>
-        <p className="text-sm mt-0.5 text-text2">Customize your Remindr experience.</p>
+        <p className="text-sm mt-0.5 text-text2">Customize your Reminder experience.</p>
       </div>
 
       <Surface className="p-6 mb-5">
         <h2 className="text-base font-bold mb-1 text-text">Themes</h2>
-        <p className="text-xs mb-5 text-text2">Choose how Remindr looks to you.</p>
+          <p className="text-xs mb-5 text-text2">Choose how Reminder looks to you.</p>
         <ThemePicker />
       </Surface>
 

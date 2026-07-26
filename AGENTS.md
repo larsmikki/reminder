@@ -28,7 +28,7 @@ docker-compose up -d
 
 ## Architecture
 
-Remindr is a monorepo with a React client and an Express API server.
+Reminder is a monorepo with a React client and an Express API server.
 
 ```
 client/      React 19 + Vite + Tailwind CSS 4

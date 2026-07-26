@@ -1,13 +1,13 @@
 version: '3.8'
 
 services:
-  remindr:
-    image: larsmikki/remindr:latest
-    container_name: remindr
+  reminder:
+    image: larsmikki/reminder:latest
+    container_name: reminder
     ports:
       - "3080:3080"
     volumes:
-      - remindr-data:/app/data
+      - reminder-data:/app/data
     environment:
       - PORT=3080
       - REMINDERS_FILE=/app/data/reminders.json
@@ -20,4 +20,4 @@ services:
       start_period: 10s
 
 volumes:
-  remindr-data:
+  reminder-data:

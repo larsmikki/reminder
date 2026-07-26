@@ -1,13 +1,13 @@
-# Remindr
+# Reminder
 
 ![screenshot](screenshot.png)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Docker Hub](https://img.shields.io/badge/Docker%20Hub-larsmikki%2Fremindr-blue?logo=docker)](https://hub.docker.com/r/larsmikki/remindr)
-[![ghcr.io](https://img.shields.io/badge/ghcr.io-larsmikki%2Fremindr-blue?logo=github)](https://github.com/larsmikki/remindr/pkgs/container/remindr)
+[![Docker Hub](https://img.shields.io/badge/Docker%20Hub-larsmikki%2Freminder-blue?logo=docker)](https://hub.docker.com/r/larsmikki/reminder)
+[![ghcr.io](https://img.shields.io/badge/ghcr.io-larsmikki%2Freminder-blue?logo=github)](https://github.com/larsmikki/reminder/pkgs/container/reminder)
 [![Node 20](https://img.shields.io/badge/Node-20-brightgreen?logo=node.js)](https://nodejs.org/)
 
-**Remindr** is a self-hosted reminder app. Track birthdays, anniversaries, appointments, trips, deadlines — any date worth remembering — with tags, icons, and a countdown for each. No database, no cloud, no accounts required.
+**Reminder** is a self-hosted reminder app. Track birthdays, anniversaries, appointments, trips, deadlines — any date worth remembering — with tags, icons, and a countdown for each. No database, no cloud, no accounts required.
 
 ## Features
 
@@ -30,28 +30,28 @@ Works on Synology, Unraid, TrueNAS, QNAP, Proxmox, or a plain Docker host.
 
 ```bash
 docker run -d \
-  --name remindr \
+  --name reminder \
   -p 3080:3080 \
-  -v remindr-data:/app/data \
+  -v reminder-data:/app/data \
   --restart unless-stopped \
-  larsmikki/remindr:latest
+  larsmikki/reminder:latest
 ```
 
 Or with Compose:
 
 ```yaml
 services:
-  remindr:
-    image: larsmikki/remindr:latest
-    container_name: remindr
+  reminder:
+    image: larsmikki/reminder:latest
+    container_name: reminder
     ports:
       - "3080:3080"
     volumes:
-      - remindr-data:/app/data
+      - reminder-data:/app/data
     restart: unless-stopped
 
 volumes:
-  remindr-data:
+  reminder-data:
 ```
 
 ### 2. Local install on Windows
@@ -59,8 +59,8 @@ volumes:
 Requires [Git for Windows](https://git-scm.com/download/win) and [Node.js 20+](https://nodejs.org/).
 
 ```powershell
-git clone https://github.com/larsmikki/remindr.git
-cd remindr
+git clone https://github.com/larsmikki/reminder.git
+cd reminder
 npm install
 npm run dev      # Vite client on :3080
 # In a second terminal:
@@ -73,8 +73,8 @@ For a production build: `npm run build && npm start`.
 
 ```bash
 brew install node git
-git clone https://github.com/larsmikki/remindr.git
-cd remindr
+git clone https://github.com/larsmikki/reminder.git
+cd reminder
 npm install
 npm run dev      # in one terminal
 npm run server   # in another
@@ -90,8 +90,8 @@ Debian/Ubuntu:
 curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
 sudo apt-get install -y nodejs git
 
-git clone https://github.com/larsmikki/remindr.git
-cd remindr
+git clone https://github.com/larsmikki/reminder.git
+cd reminder
 npm install
 npm run dev      # in one terminal
 npm run server   # in another
@@ -129,10 +129,17 @@ All data is stored in a single file in the Docker volume:
   reminders.json    # all reminders and tags
 ```
 
+### Upgrading from Remindr
+
+The app and Docker volume are now named `reminder` and `reminder-data`. Existing Docker
+deployments that use the old `remindr-data` named volume must either keep that volume mounted
+at `/app/data` or migrate its contents to `reminder-data` before starting the renamed app.
+The data file itself remains the brand-neutral `/app/data/reminders.json`.
+
 ## License
 
 [MIT](LICENSE)
 
 ## Support
 
-If Remindr saves you time, consider [buying me a coffee](https://buymeacoffee.com/larsmikki) or [donating via PayPal](https://paypal.me/larsmikki). It helps keep the project free and maintained.
+If Reminder saves you time, consider [buying me a coffee](https://buymeacoffee.com/larsmikki) or [donating via PayPal](https://paypal.me/larsmikki). It helps keep the project free and maintained.

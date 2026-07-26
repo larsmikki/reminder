@@ -1,6 +1,6 @@
 {
-  "name": "Remindr",
-  "short_name": "Remindr",
+  "name": "Reminder",
+  "short_name": "Reminder",
   "description": "Reminders for any date worth remembering — self-hosted, private, free",
   "start_url": "/",
   "display": "standalone",
