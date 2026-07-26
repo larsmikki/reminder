@@ -87,5 +87,5 @@ Static files from `dist-client/` are served by the API server in production.
 
 - Accent color: `#f59e0b` (amber-500) — see `C:\java\shared\design-system\` for the canonical fleet spec
 - Gradient: `linear-gradient(135deg, #fbbf24 0%, #d97706 100%)`
-- Icon: layered heart — white on amber gradient
+- Icon: prompt bars — white on amber gradient
 - Theme system: CSS variables on `:root`, dark mode via `[data-theme]` attribute
