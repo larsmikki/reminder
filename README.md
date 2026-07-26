@@ -1,7 +1,5 @@
 # Reminder
 
-![screenshot](screenshot.png)
-
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Docker Hub](https://img.shields.io/badge/Docker%20Hub-larsmikki%2Freminder-blue?logo=docker)](https://hub.docker.com/r/larsmikki/reminder)
 [![ghcr.io](https://img.shields.io/badge/ghcr.io-larsmikki%2Freminder-blue?logo=github)](https://github.com/larsmikki/reminder/pkgs/container/reminder)
